@@ -66,9 +66,10 @@ function getQuestion() {
 };
 
 function questionClick() {
+  event.stopPropagation();
   
   // check if user guessed right
-  if (event.textContent = currentQuestion.answer) {
+  if (event.target.textContent === currentQuestion.answer) {
   console.log(event.target.textContent);
   console.log(currentQuestion.answer);
     // play "right" sound effect
