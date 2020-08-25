@@ -16,8 +16,9 @@ var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 var startScreenEl = document.getElementById("start-screen");
-var questionTextEl = document.getElementById("question-title")
-
+var questionTextEl = document.getElementById("question-title");
+var endScreenEl = document.getElementById("end-screen");
+var finalScoreEl = document.getElementById("final-score");
 
 // sound effects
 var sfxRight = new Audio("assets/sfx/correct.wav");
@@ -104,13 +105,19 @@ function quizEnd() {
   // stop timer
   time = 0;
   clearInterval(timer);
-
-  // show end screen
-
   // show final score
+  finalScoreEl.textContent = userScore;
 
+// debugger;
   // hide questions section
-}
+  // console.log(questionsEl.className);
+  questionsEl.className = "hide";
+  // console.log(questionsEl.className);
+// debugger;
+  // show end screen  
+  endScreenEl.className = "start";
+
+};
 
 function clockTick() {
   // update time
