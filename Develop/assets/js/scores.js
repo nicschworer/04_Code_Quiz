@@ -22,6 +22,7 @@ function printHighscores() {
 
 function clearHighscores() {
   highScoresEl.innerHTML = "";
+  localStorage.removeItem("High Scores");
 }
 
 window.onload = printHighscores;

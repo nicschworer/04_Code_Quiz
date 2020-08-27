@@ -78,7 +78,7 @@ function questionClick() {
     // play "right" sound effect
     // add 10 points to user score
     userScore += 10;
-    sfxRight.play();
+    // sfxRight.play();
     choicesEl.innerHTML = "<h1>CORRECT</h1>";
     choicesEl.style.color = "green";
 
@@ -88,10 +88,7 @@ function questionClick() {
   
       // display new time on page
       // play "wrong" sound effect
-      // var wrong = document.createElement("audio");
-      // wrong.src = sfxWrong;
-      // wrong.play();
-      sfxWrong.play();
+      // sfxWrong.play();
       choicesEl.innerHTML = "<h1>WRONG</h1>";
       choicesEl.style.color = "red";
 
