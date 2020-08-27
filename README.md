@@ -13,11 +13,8 @@ With most of the pseudo code provided, I didn't have too hard of a time writing 
 2. getting the timer to clear once you hit 0 seconds or finish all questions (I realized eventually that I accidentially defined my timer variable twice, once in a function which meant I wasn't calling the correct variable later.)
 
 Here are some snapshots of the app:
-![Start Screen](prodpics/StartScreen.png)
 
-![Question Screen](prodpics/QuestionScreen.png)
-
-![End Screen](prodpics/EndScreen.png)
-
-![Score Screen](prodpics/ScoreScreen.png)
-
+<img src = "prodpics/StartScreen.png">
+<img src = "prodpics/QuestionScreen.png">
+<img src = "prodpics/EndScreen.png">
+<img src = "prodpics/ScoreScreen.png">
