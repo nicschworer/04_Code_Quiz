@@ -14,7 +14,7 @@ With most of the pseudo code provided, I didn't have too hard of a time writing 
 
 Here are some snapshots of the app:
 
-<img src = "prodpics/StartScreen.png" border = 1px solid black>
-<img src = "prodpics/QuestionScreen.png">
-<img src = "prodpics/EndScreen.png">
-<img src = "prodpics/ScoreScreen.png">
+<img src = "prodpics/StartScreen.png" width = 500>
+<img src = "prodpics/QuestionScreen.png" width = 500>
+<img src = "prodpics/EndScreen.png" width = 500>
+<img src = "prodpics/ScoreScreen.png" width = 500>
