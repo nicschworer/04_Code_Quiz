@@ -70,22 +70,20 @@ function questionClick() {
     // play "right" sound effect
     // add 10 points to user score
     userScore += 10;
-    // sfxRight.play();
+    sfxRight.play();
     choicesEl.innerHTML = "<h1>CORRECT</h1>";
     choicesEl.style.color = "green";
-
   } else {
-      // penalize time
-      time = time - 10;
-  
-      // display new time on page
-      // play "wrong" sound effect
-      // sfxWrong.play();
-      choicesEl.innerHTML = "<h1>WRONG</h1>";
-      choicesEl.style.color = "red";
+    // penalize time
+    time = time - 10;
 
-  };  
-  // flash right/wrong feedback on page for half a second
+    // display new time on page
+    // play "wrong" sound effect
+    sfxWrong.play();
+    choicesEl.innerHTML = "<h1>WRONG</h1>";
+    choicesEl.style.color = "red";
+    };  
+
   // move to next question
   currentQuestionIndex++;
   // check if we've run out of questions
@@ -93,7 +91,7 @@ function questionClick() {
     setTimeout(quizEnd, 500);
   } else {
     setTimeout(getQuestion, 500);
-  }
+  };
 };
 
 function quizEnd() {
@@ -117,9 +115,8 @@ function clockTick() {
     timerEl.textContent = time;
     if (time <= 0) {
       quizEnd();
-    }
+    };
   };
-
 
 function saveHighscore() {
   // get value of input box
@@ -128,31 +125,31 @@ function saveHighscore() {
   // make sure value wasn't empty
   if (userInitials === "") {
     alert("Enter your initials, stupid.");
-  }
+  };
 
-    // get saved scores from localstorage, or if not any, set to empty array
+  // get saved scores from localstorage, or if not any, set to empty array
   highScores = JSON.parse(localStorage.getItem("High Scores"));
 
   if (highScores == null) {
     highScores = [];
-  }
+  };
 
-    // format new score object for current user
-    var user = {
-      Initials: userInitials,
-      Score: userScore,
-    } 
+  // format new score object for current user
+  var user = {
+    Initials: userInitials,
+    Score: userScore,
+  }; 
 
-    // save to localstorage
-    highScores.push(user);
+  // save to localstorage
+  highScores.push(user);
 
-    localStorage.setItem("High Scores", JSON.stringify(highScores));
+  localStorage.setItem("High Scores", JSON.stringify(highScores));
 
-    // redirect to next page
-    window.location.href = "./highscores.html";
+  // redirect to next page
+  window.location.href = "./highscores.html";
 
-    printHighscores();
-}
+  printHighscores();
+};
 
 function checkForEnter(event) {
   event.preventDefault();
