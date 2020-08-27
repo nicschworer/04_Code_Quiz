@@ -139,12 +139,10 @@ function saveHighscore() {
 
     // get saved scores from localstorage, or if not any, set to empty array
   highScores = JSON.parse(localStorage.getItem("High Scores"));
-  console.log(highScores);
 
   if (highScores == null) {
     highScores = [];
   }
-  console.log(highScores);
 
     // format new score object for current user
     var user = {
@@ -152,10 +150,8 @@ function saveHighscore() {
       Score: userScore,
     } 
 
-    console.log(user);
     // save to localstorage
     highScores.push(user);
-    console.log(highScores);
 
     localStorage.setItem("High Scores", JSON.stringify(highScores));
 
