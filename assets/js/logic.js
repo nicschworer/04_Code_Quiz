@@ -33,15 +33,7 @@ function startQuiz() {
   // un-hide questions section
   questionsEl.className = "start";
   // start timer
-  timer = setInterval(function() {
-    time--;
-  // show starting time
-    timerEl.textContent = time;
-    if (time <= 0) {
-      clearInterval(timer);
-      quizEnd();
-    }
-  }, 1000);
+  timer = setInterval(clockTick, 1000);
   getQuestion();
 };  
 
@@ -119,11 +111,15 @@ function quizEnd() {
   endScreenEl.className = "start";
 };
 
-// function clockTick() {
-//   // update time
+function clockTick() {
+  time--;
+  // show starting time
+    timerEl.textContent = time;
+    if (time <= 0) {
+      quizEnd();
+    }
+  };
 
-//   // check if user ran out of time
-// }
 
 function saveHighscore() {
   // get value of input box
