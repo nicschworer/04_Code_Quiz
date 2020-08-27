@@ -33,7 +33,7 @@ function startQuiz() {
   // un-hide questions section
   questionsEl.className = "start";
   // start timer
-  var timer = setInterval(function() {
+  timer = setInterval(function() {
     time--;
   // show starting time
     timerEl.textContent = time;
@@ -106,7 +106,7 @@ function questionClick() {
 
 function quizEnd() {
   // stop timer
-  // clearInterval(timer);
+  clearInterval(timer);
   timerEl.textContent = 0;
 
   // show final score
